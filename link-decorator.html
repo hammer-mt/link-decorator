@@ -1,0 +1,22 @@
+<!-- For passing the email and marketing source to typeform -->
+<!-- https://github.com/mjt145/link-decorator -->
+<script>
+var email = localStorage.getItem("email") || "";
+var name = localStorage.getItem("name") || "";
+var utm_source = localStorage.getItem("utm_source") || "";
+var utm_medium = localStorage.getItem("utm_medium") || "";
+var utm_campaign = localStorage.getItem("utm_campaign") || "";
+var referrer = localStorage.getItem("referrer") || "";
+
+var tfBtns = document.getElementsByClassName('get-started-sim');
+
+for (i=0; i< tfBtns.length; i++) {
+    var params = "?email="+encodeURIComponent(email);
+    params += "&name="+encodeURIComponent(name);
+    params += "&utm_source="+encodeURIComponent(utm_source);
+    params += "&utm_medium="+encodeURIComponent(utm_medium);
+    params += "&utm_campaign="+encodeURIComponent(utm_campaign);
+    params += "&referrer="+encodeURIComponent(referrer);
+	tfBtns[i].href=tfBtns[i].href+params;
+}
+</script>
