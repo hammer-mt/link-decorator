@@ -1,0 +1,14 @@
+<!-- For storing values to later pass to typeform -->
+<!-- https://github.com/mjt145/link-decorator -->
+<script>
+var email = document.getElementById("EMAIL");
+var name = document.getElementById("NAME");
+
+email.addEventListener("change", function() {
+    localStorage.setItem("email", email.value);
+});
+
+name.addEventListener("change", function() {
+    localStorage.setItem("name", name.value);
+});
+</script>
